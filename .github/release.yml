@@ -1,0 +1,13 @@
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+
+jobs:
+  release:
+    steps:
+      - name: asdf
+        run: echo "version: ${{ github.event.inputs.version }}"
